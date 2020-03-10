@@ -28,9 +28,17 @@ export const Container = styled.div`
     margin-top: 5px;
   }
 
-  ${ props => props.isDraggind && css`
+  ${ props => props.isDragging && css`
     border: 2px dashed rgba(0, 0, 0, 0.2);
     padding-top: 31px;
+	border-radius: 0;
+	background-color: transparent;
+	box-shadow: none;
+	cursor: grabbing;
+	
+	p, img, header {
+		opacity: 0;
+	}
   `}
 `;
 
@@ -41,3 +49,18 @@ export const Label = styled.span`
   display: inline-block;
   background-color: ${ ({ color }) => color}
 `;
+
+/*
+
+&:after {
+  position: absolute;
+  content: "${({ tooltip }) => tooltip}";
+  width: 200px;
+  margin-left: 15px;
+  margin-top: -4px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 5px;
+}
+
+*/
