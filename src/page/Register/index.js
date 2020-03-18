@@ -47,6 +47,7 @@ export default function Register({ tsuser }) {
 
             }
         }
+        post(info);
 
         console.log(info);
     };
