@@ -8,3 +8,13 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const Toggle = styled.button`
+  position: absolute;
+  right: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+`;
