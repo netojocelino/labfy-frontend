@@ -42,8 +42,12 @@ export default function Board({ tsuser }) {
           response = await api.post(`/`, newData);
           card = response.data;
         break;
-      case 'xdelete':
-        response = await api.put(`/${cardId}`);
+      case 'next':
+        response = await api.put(`/${cardId}/move`);
+        card = response.data;
+        break;
+      case 'back':
+        response = await api.put(`/${cardId}/move`);
         card = response.data;
         break;
       default:
