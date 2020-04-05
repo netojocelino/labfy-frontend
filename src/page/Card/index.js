@@ -22,7 +22,7 @@ export default function Card ({ data }) {
         <header>
             <CardStyle.Label key={data.label} color={data.label} />
             { data.list_state.toLowerCase() !== 'done' && data.list_state.toLowerCase() !== 'fridge' && 
-                <CardStyle.Icon onClick={ () => move(data.card_id, 'NexT') } title={data.action.title}>
+                <CardStyle.Icon onClick={ () => move(data.card_id, 'next') } title={data.action.title}>
                 <MdKeyboardArrowRight size={17} color="#ccc" />
             </CardStyle.Icon>}
             { !fridge_state &&

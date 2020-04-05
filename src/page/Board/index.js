@@ -12,7 +12,7 @@ export default function Board({ tsuser }) {
   async function loading(){
     let response;
     try{
-      response = await api.get('/');
+      response = await api.get('/index');
       const cards = response.data;
       const newCards = [
         { title: 'TODO', cards: cards.filter( card => card.list_state === 'TODO') },
@@ -32,18 +32,20 @@ export default function Board({ tsuser }) {
   }, []);
 
   async function move(cardId, newState, newData = {}) {
+    //   alert(`${cardId}, ${newState}, ${newData}`); return;
     let response, card;
     switch( newState.toString().toLowerCase() ) {
       case 'delete':
-        response = await api.delete(`/${cardId}`);
+        response = await api.post(`/${cardId}/archive`);
         card = response.data;
         break;
       case 'post':
-          response = await api.post(`/`, newData);
+          response = await api.post(`/index`, newData);
           card = response.data;
         break;
       case 'next':
-        response = await api.put(`/${cardId}/move`);
+        response = await api.post(`/${cardId}/move`);
+        console.log(response);
         card = response.data;
         break;
       case 'back':

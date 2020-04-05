@@ -37,13 +37,14 @@ export default function Register({ tsuser }) {
 
         async function post(data) {
             try {
-                const request = await api.post('/', data);
+                const request = await api.post('/index', data);
                 const card = request.data;
                 setProccess("success");
             } catch (error) {
                 setProccess('error');
             }finally{
                 setTimeout(() => setProccess(''), 1000);
+                window.location = "";
 
             }
         }
@@ -54,9 +55,6 @@ export default function Register({ tsuser }) {
   
     return (<React.Fragment>
         <RegisterStyle.Form>
-            <RegisterStyle.Message type={proccess}>
-                {message[proccess]}
-            </RegisterStyle.Message>
             <fieldset>
                 <label>Nome da Solicitação</label>
                 <input type="text" value={info.title} name="title" onChange={setInfo} />
@@ -73,7 +71,7 @@ export default function Register({ tsuser }) {
                 <RegisterStyle.SelectColor value={info.label} name="label" onChange={setInfo}>
                     <option value="">Selecione uma cor</option>
                     {labels.map( label =>
-                        <option value={label}>{label}</option>
+                        <option value={label} key={label}>{label}</option>
                     )}
                 </RegisterStyle.SelectColor>
             </fieldset>
