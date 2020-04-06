@@ -6,9 +6,3 @@ const api = axios.create({
 });
 
 export default api;
-
-/*
-"/api/?key=index/",
-"https://api-labfy.000webhostapp.com?key=index",
-'http://localhost:8000/api/public/cards',
-*/
