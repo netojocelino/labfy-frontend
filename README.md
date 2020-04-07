@@ -24,7 +24,9 @@ Aplicação para listar cards que aguardam ser atendidas, seguindo o fluxo de **
 ## Instalação
 -------------
 Uma vez que você tem tudo instalado pode seguir os passos abaixo para executar e rodar o projeto:
- - Clone esse repositório com https://github.com/netojocelino/labfy-frontend.git;
+ - Clone esse repositório com
+ 
+ ```$ git clone https://github.com/netojocelino/labfy-frontend.git```;
  - Entre na pasta: `cd labfy-frontend`;
  - Instalar todas as dependências:
    - Em caso de Yarn executar `yarn`;
