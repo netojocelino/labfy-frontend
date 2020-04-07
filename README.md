@@ -55,7 +55,29 @@ Após já ter instalado os pré-requisitos, basta seguir abaixo dentro da pasta 
   - `npm run build` em caso de npm.
 
 
-## 
+## Caso de teste
+A tela inicial da aplicação pode ser vista em `/tickets/`
+
+![TELA INICIAL](./doc/images/home.png)
+
+Uitlizando como Nome de solicitação ***Avaliação remota do mashup avaliação individual do serviço***, como descrição ***A avaliação de cada serviço será realizada com base no meu monitoramento remoto dos comandos executados em Cedro e  no mashup final disponibilizado no Github do time.***, como label ***#54E1F7*** e como solicitante ***Jocelino*** teremos o registro que pode ser visto a seguir
+
+![TELA DE REGISTRO](./doc/images/register.png)
+
+E como resultado
+
+![TELA APÓS REGISTRO](./doc/images/registered.png)
+
+
+Seguindo o fluxo comentado na visão geral de arquivar podemos chegar na tela a seguir
+
+![TELA APÓS ARQUIVAR](./doc/images/fridged.png)
+
+E após alguns movimentos podemos chegar em 
+
+![TELA FINAL](./doc/images/moved.png)
+
+
 
 
 
